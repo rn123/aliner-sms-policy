@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Privacy Policy — A-Liner SMS Status Bridge</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: #222; }
+  h1 { border-bottom: 1px solid #ddd; padding-bottom: .3rem; }
+  h2 { margin-top: 1.5rem; }
+  code, kbd { background: #f3f3f3; padding: 1px 4px; border-radius: 3px; font-size: 0.95em; }
+  a { color: #06c; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy — A-Liner SMS Status Bridge</h1>
+
+<p><strong>Last updated:</strong> 2026-05-03<br>
+<strong>Operator:</strong> Ray Nowell (Sole Proprietor) — <a href="mailto:ray.nowell@gmail.com">ray.nowell@gmail.com</a></p>
+
+<h2>What this service is</h2>
+<p>A personal SMS-based query interface that lets the operator check the status of their own off-grid RV monitoring system (battery state of charge, solar production, Starlink connectivity, propane level, weather, location) from their own mobile phone. The recipient and the operator are the same individual.</p>
+
+<h2>Data collected</h2>
+<ul>
+  <li>Inbound SMS message body (a single keyword such as <code>soc</code> or <code>solar</code>).</li>
+  <li>Inbound SMS sender phone number, used only to verify the sender is the registered operator.</li>
+  <li>Twilio routing metadata (timestamp, message SID) handled by Twilio per their standard messaging API.</li>
+</ul>
+
+<h2>How data is used</h2>
+<p>Inbound SMS bodies are matched against a fixed keyword list and dispatched to a corresponding status reply. The sender phone number is checked against an allowlist of one (the registered operator's mobile number) and discarded after each request.</p>
+
+<h2>Data retention</h2>
+<p>Twilio retains message logs per its own retention policy (see <a href="https://www.twilio.com/legal/privacy">twilio.com/legal/privacy</a>). The receiving Home Assistant system does not log inbound SMS bodies beyond the immediate dispatch handler.</p>
+
+<h2>Third-party sharing</h2>
+<p>None. SMS data is not shared with third parties, sold, rented, or used for marketing.</p>
+
+<h2>Marketing</h2>
+<p>No marketing or promotional messages are sent. The system only replies to inbound queries from the registered operator's verified mobile number.</p>
+
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:ray.nowell@gmail.com">ray.nowell@gmail.com</a></p>
+</body>
+</html>
