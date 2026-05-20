@@ -17,15 +17,15 @@
 <body>
 <h1>Terms and Conditions — A-Liner SMS Status Bridge</h1>
 
-<p><strong>Last updated:</strong> 2026-05-14<br>
+<p><strong>Last updated:</strong> 2026-05-19<br>
 <strong>Operator:</strong> Ray Nowell (Sole Proprietor) — <a href="mailto:ray.nowell@gmail.com">ray.nowell@gmail.com</a><br>
 <strong>Program name:</strong> A-Liner SMS Status Bridge</p>
 
 <h2>Description</h2>
-<p>A personal SMS-based query interface for the operator's own off-grid RV monitoring system. Sending a keyword from the registered mobile number (e.g. <code>soc</code>, <code>solar</code>, <code>sl</code>, <code>lp</code>, <code>wx</code>, <code>where</code>) returns a single-message status reply. This service is restricted to a single registered operator and is not a public service.</p>
+<p>An automated SMS application for an off-grid RV monitoring system. When an authorized recipient texts a keyword (e.g. <code>soc</code>, <code>solar</code>, <code>sl</code>, <code>lp</code>, <code>wx</code>, <code>where</code>) to the service number, the application replies with a single-message status. The application originates every reply. The service is restricted to authorized recipients (the owner and authorized household members) and is not a public service.</p>
 
 <h2>How consent is given (opt-in / Call to Action)</h2>
-<p>This is a Sole Proprietor program with exactly one recipient: the account holder, who is also the sole sender. There is no public opt-in &mdash; no website form, advertisement, point-of-sale, or third-party enrollment &mdash; because there is no audience other than the account holder. Consent is given directly by the account holder entering their own mobile phone number into a configuration file on the RV monitoring system they personally own and operate. That act &mdash; the owner enrolling their own number on their own equipment &mdash; is the opt-in. The system enforces a single-number allowlist, so no other number can be enrolled. Consent can be withdrawn at any time by replying <strong>STOP</strong> or by removing the number from the configuration; replying <strong>START</strong> restores service.</p>
+<p>This is a Sole Proprietor program. There is no public opt-in &mdash; no website form, advertisement, point-of-sale, or third-party enrollment. Each recipient consents by having their mobile number registered with the application by the owner; enrollment is limited to the owner and authorized household members. That registration &mdash; the owner adding an authorized number to the application's allowlist &mdash; is the opt-in. The application enforces the allowlist, so only registered numbers receive messages. Consent can be withdrawn at any time by replying <strong>STOP</strong> or by removing the number from the configuration; replying <strong>START</strong> restores service.</p>
 
 <h2>Message frequency</h2>
 <p>Reply-driven. The system sends one reply per inbound query. Expected volume: fewer than 30 messages per day, varying with usage.</p>
@@ -43,7 +43,7 @@
 <p>Replying <strong>STOP</strong> (or <strong>STOPALL</strong>, <strong>UNSUBSCRIBE</strong>, <strong>CANCEL</strong>, <strong>END</strong>, <strong>QUIT</strong>) halts all further messages from this number. The receiving system records the opt-out and ignores every subsequent query until the operator replies <strong>START</strong> to resume. Carrier-level opt-out filtering is also enforced by the mobile carriers and by Twilio independently of this system.</p>
 
 <h2>Eligibility</h2>
-<p>Sole Proprietor campaign — restricted to the registered operator. No third-party recipients.</p>
+<p>Sole Proprietor campaign — restricted to authorized recipients (the owner and authorized household members). No public or third-party enrollment.</p>
 
 <h2>Changes</h2>
 <p>These terms may be updated at any time; the latest published version applies.</p>

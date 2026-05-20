@@ -16,24 +16,24 @@
 <body>
 <h1>Privacy Policy — A-Liner SMS Status Bridge</h1>
 
-<p><strong>Last updated:</strong> 2026-05-14<br>
+<p><strong>Last updated:</strong> 2026-05-19<br>
 <strong>Operator:</strong> Ray Nowell (Sole Proprietor) — <a href="mailto:ray.nowell@gmail.com">ray.nowell@gmail.com</a></p>
 
 <h2>What this service is</h2>
-<p>A personal SMS-based query interface that lets the operator check the status of their own off-grid RV monitoring system (battery state of charge, solar production, Starlink connectivity, propane level, weather, location) from their own mobile phone. The recipient and the operator are the same individual.</p>
+<p>An automated SMS application that replies with the status of an off-grid RV monitoring system (battery state of charge, solar production, Starlink connectivity, propane level, weather, location) when an authorized recipient texts a keyword to the service number. The application originates every outbound message; recipients are the system owner and authorized household members.</p>
 
 <h2>How consent is given</h2>
-<p>This is a Sole Proprietor program with a single recipient who is also the sole sender. There is no public opt-in form or third-party enrollment. Consent is given by the account holder entering their own mobile number into a configuration file on the RV monitoring system they own and operate; the system enforces a single-number allowlist so no other number can be enrolled. Consent is withdrawn by replying <strong>STOP</strong> or removing the number from the configuration; replying <strong>START</strong> restores service.</p>
+<p>This is a Sole Proprietor program. There is no public opt-in form, advertisement, or third-party enrollment. Each recipient consents by having their mobile number registered with the application by the owner; enrollment is limited to the owner and authorized household members, and the application enforces an allowlist so that only registered numbers receive replies. Consent is withdrawn by replying <strong>STOP</strong> or removing the number from the configuration; replying <strong>START</strong> restores service.</p>
 
 <h2>Data collected</h2>
 <ul>
   <li>Inbound SMS message body (a single keyword such as <code>soc</code> or <code>solar</code>).</li>
-  <li>Inbound SMS sender phone number, used only to verify the sender is the registered operator.</li>
+  <li>Inbound SMS sender phone number, used only to verify the sender is an authorized recipient.</li>
   <li>Twilio routing metadata (timestamp, message SID) handled by Twilio per their standard messaging API.</li>
 </ul>
 
 <h2>How data is used</h2>
-<p>Inbound SMS bodies are matched against a fixed keyword list and dispatched to a corresponding status reply. The sender phone number is checked against an allowlist of one (the registered operator's mobile number) and discarded after each request.</p>
+<p>Inbound SMS bodies are matched against a fixed keyword list and dispatched to a corresponding status reply. The sender phone number is checked against the allowlist of authorized numbers and discarded after each request.</p>
 
 <h2>Data retention</h2>
 <p>Twilio retains message logs per its own retention policy (see <a href="https://www.twilio.com/legal/privacy">twilio.com/legal/privacy</a>). The receiving Home Assistant system does not log inbound SMS bodies beyond the immediate dispatch handler.</p>
@@ -42,7 +42,7 @@
 <p>None. SMS data is not shared with third parties, sold, rented, or used for marketing. Mobile information is not shared with third parties or affiliates for marketing or promotional purposes.</p>
 
 <h2>Marketing</h2>
-<p>No marketing or promotional messages are sent. The system only replies to inbound queries from the registered operator's verified mobile number.</p>
+<p>No marketing or promotional messages are sent. The system only replies to inbound queries from authorized, verified mobile numbers.</p>
 
 <h2>Contact</h2>
 <p>Questions: <a href="mailto:ray.nowell@gmail.com">ray.nowell@gmail.com</a></p>
